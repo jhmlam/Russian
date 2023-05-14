@@ -22,6 +22,7 @@ The russian alphabet is called cyrillic. The origin is very mixed - greek, older
 
 * `The Cyrillic alphabet and Russian spelling generally employ fewer diacritics than those used in other European languages written with the Latin alphabet. The only diacritic, in the proper sense, is the acute accent `/` (Russian: знак ударения 'mark of stress')` Some other diacritics completely change the sound `..` and `u` and each were seemingly only apply to one of the letters. 
 
+* ![image](https://github.com/jhmlam/Russian/assets/33080741/88df8360-c030-4c0c-b952-a7a5d203c9ab)
 
 
 # Writing
