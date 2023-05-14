@@ -34,6 +34,8 @@ The russian alphabet is called cyrillic. The origin is very mixed - greek, older
 * * ![image](https://github.com/jhmlam/Russian/assets/33080741/20d9f9b0-6ca2-4d01-973a-4a562acb9538)
 
 ## How to type russian with a QWERT keyboard
+* Romanized. https://en.m.wikipedia.org/wiki/Romanization_of_Russian
+
 `On Windows:
 Go to "Settings" and select "Time & Language"
 Select "Language"
