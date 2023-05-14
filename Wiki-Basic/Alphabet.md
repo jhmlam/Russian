@@ -1,15 +1,26 @@
 # Pronunciation
 ## Introduction
-The russian alphabet is called cyrillic. The origin is very mixed - greek, older greek, hebrew, orientals, latin, etc and different slavs in different parts of the world added more and more until it settled in Russia at 34 letters in modern time. See [reference](https://en.wikipedia.org/wiki/Russian_alphabet#/media/File:Historical_evolution_of_the_Russian_Cyrillic_alphabet,_until_the_19th_century_(Grech).jpg). Table in p.23-25 contains pronunciation tips with a descending order in similarity of pronunciation in french. Table p.27 provides pronunciation in french. Note that the order is not english/french.
+The russian alphabet is called cyrillic. The origin is very mixed - greek, older greek, hebrew, orientals, latin, etc and different slavs in different parts of the world added more and more until it settled in Russia at 33 letters in modern time. See [reference](https://en.wikipedia.org/wiki/Russian_alphabet#/media/File:Historical_evolution_of_the_Russian_Cyrillic_alphabet,_until_the_19th_century_(Grech).jpg). Table in p.23-25 contains pronunciation tips with a descending order in similarity of pronunciation in french. Table p.27 provides pronunciation in french. Note that the order is not english/french.
 * ![image](https://github.com/jhmlam/Russian/assets/33080741/fcd974fe-2202-45c0-883f-6b4a5759430b)
-* Also see https://en.wikipedia.org/wiki/Russian_alphabet for typeset. It has evevn more than 34 letters in the alphabet. Why?
+* Also see https://en.wikipedia.org/wiki/Russian_alphabet for typeset. It has evevn more than 33 letters in the alphabet. Why?
 
 
 
 ## Remarks on frequency
+* Vowels. Similar to english AEIOU but with 2 forms soft and hard (i.e. articulation?); similarly the consonants. 
+* * Hard. `А	Э	Ы	О	У`
+* * Soft. `Я	Е	И	Ё	Ю`. Clearly, it is more than AEIOU as we don't do `a == ya` in english. 
+* Consonant
+* * Hard/Soft. `Б, В, Г,
+Д, З, К,
+Л, М, Н,
+П, Р, С,
+Т, Ф, Х`
+* * Hard. `Ж, Ш, Ц`
+* * Soft. `Й, Щ, Ч`
 
 * `The Cyrillic alphabet and Russian spelling generally employ fewer diacritics than those used in other European languages written with the Latin alphabet. The only diacritic, in the proper sense, is the acute accent `/` (Russian: знак ударения 'mark of stress')` Some other diacritics completely change the sound `..` and `u` and each were seemingly only apply to one of the letters. 
-* 
+
 
 
 # Writing
