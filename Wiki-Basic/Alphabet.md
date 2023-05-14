@@ -1,8 +1,8 @@
 # Pronunciation
 ## Introduction
 The russian alphabet is called cyrillic. The origin is very mixed - greek, older greek, hebrew, orientals, latin, etc and different slavs in different parts of the world added more and more until it settled in Russia at 33 letters in modern time. See [reference](https://en.wikipedia.org/wiki/Russian_alphabet#/media/File:Historical_evolution_of_the_Russian_Cyrillic_alphabet,_until_the_19th_century_(Grech).jpg). Table in p.23-25 contains pronunciation tips with a descending order in similarity of pronunciation in french. Table p.27 provides pronunciation in french. Note that the order is not english/french. The table below is 19th century.
-* ![image](https://github.com/jhmlam/Russian/assets/33080741/fcd974fe-2202-45c0-883f-6b4a5759430b)
-* Also see https://en.wikipedia.org/wiki/Russian_alphabet for typeset. It has evevn more than 33 letters in the alphabet. Why?
+* 19th. ![image](https://github.com/jhmlam/Russian/assets/33080741/fcd974fe-2202-45c0-883f-6b4a5759430b)
+* 20th. https://en.wikipedia.org/wiki/Russian_alphabet for typeset. 
 
 
 
