@@ -8,8 +8,9 @@ The russian alphabet is called cyrillic. The origin is very mixed - greek, older
 
 ## Remarks on frequency
 * Vowels. Similar to english AEIOU but with 2 forms soft and hard (i.e. articulation?); similarly the consonants. 
-* * Hard. `А	Э	Ы	О	У`
-* * Soft. `Я	Е	И	Ё	Ю`. Clearly, it is more than AEIOU as we don't do `a == ya` in english. 
+* * Hard. `А,Э,Ы,О,У`
+* * Soft. `Я,Е,И,Ё,Ю`. Clearly, it is more than AEIOU as we don't do `a == ya` in english i.e. `with the exception of ⟨и⟩, are iotated (pronounced with a preceding /j/)`
+
 * Consonant
 * * Hard/Soft. `Б, В, Г,
 Д, З, К,
