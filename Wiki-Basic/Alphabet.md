@@ -44,6 +44,14 @@ Look similar ones
 
 
 ## Remarks on frequency
+
+
+* The modern Russian alphabet consists of 33 letters: 
+* * twenty consonants (⟨б⟩, ⟨в⟩, ⟨г⟩, ⟨д⟩, ⟨ж⟩, ⟨з⟩, ⟨к⟩, ⟨л⟩, ⟨м⟩, ⟨н⟩, ⟨п⟩, ⟨р⟩, ⟨с⟩, ⟨т⟩, ⟨ф⟩, ⟨х⟩, ⟨ц⟩, ⟨ч⟩, ⟨ш⟩, ⟨щ⟩), 
+* * ten vowels (⟨а⟩, ⟨е⟩, ⟨ё⟩, ⟨и⟩, ⟨о⟩, ⟨у⟩, ⟨ы⟩, ⟨э⟩, ⟨ю⟩, ⟨я⟩), 
+* * a semivowel / consonant (⟨й⟩), and 
+* * two modifier letters or "signs" (⟨ь⟩, ⟨ъ⟩) that alter pronunciation of a preceding consonant or a following vowel.
+
 * Vowels. Similar to english AEIOU but with 2 forms soft and hard (i.e. articulation?); similarly the consonants. 
 * * Hard. `А,Э,Ы,О,У`
 * * Soft. `Я,Е,И,Ё,Ю`. Clearly, it is more than AEIOU as we don't do `a == ya` in english i.e. `with the exception of ⟨и⟩, are iotated (pronounced with a preceding /j/)`
