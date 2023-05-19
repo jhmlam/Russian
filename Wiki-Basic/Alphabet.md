@@ -4,8 +4,16 @@ The russian alphabet is called cyrillic. The origin is very mixed - greek, older
 * 19th. ![image](https://github.com/jhmlam/Russian/assets/33080741/fcd974fe-2202-45c0-883f-6b4a5759430b)
 * 20th. https://en.wikipedia.org/wiki/Russian_alphabet for typeset. 
 
+## Different ones
+* A - Я
+* I - Ы,И
+* O - Ё
+* U - У,Ю
 
+* V - 
 
+* CH - Ц,Ч
+* ZH - Ж,Й
 ## Remarks on frequency
 * Vowels. Similar to english AEIOU but with 2 forms soft and hard (i.e. articulation?); similarly the consonants. 
 * * Hard. `А,Э,Ы,О,У`
