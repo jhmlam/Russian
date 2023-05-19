@@ -1,6 +1,7 @@
 # Daily
 * poka - bye
 * priviet - hello
+* tovarish - comrade 
 
 # Opinion
 * duk - ok
