@@ -93,6 +93,3 @@ Choose "Russian (Typewriter)" or "Russian (ЙЦУКЕН)" layout to match your p
 ## Example on handwritting
 * From https://readcoop.eu/model/russian-generic-handwriting/
 * * ![image](https://github.com/jhmlam/Russian/assets/33080741/181627a2-0e3b-41e5-b4b9-cbcb447c795c)
-
-* From wiki
-* * ![image](https://github.com/jhmlam/Russian/assets/33080741/dfe22ef1-4d98-4236-9de0-11f13140627f)
