@@ -12,14 +12,14 @@ The russian alphabet is called cyrillic. The origin is very mixed - greek, older
 * 
 * Reference https://en.wikipedia.org/wiki/Russian_alphabet for typeset. 
 ### Different-From-English ones
-* A - Я
-* I - Ы,И
-* O - Ё
-* U - У,Ю
+* Aa - Я
+* Ii - Ы,И
+* Oo - Ё
+* Uu - У,Ю
 
-* V - Вв
-* S - Сс
-
+* Vv - Вв
+* Ss - Сс
+* t - m (cursive...)
 Paired ones
 
 * Rolled R - Р
