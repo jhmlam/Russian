@@ -20,8 +20,8 @@ The russian alphabet is called cyrillic. The origin is very mixed - greek, older
 * Vv - Вв
 * Ss - Сс
 * t - m (cursive...)
-Paired ones
 
+Paired ones
 * Rolled R - Р
 * Lazy R - Л
 * B - Бб
