@@ -1,0 +1,1122 @@
+
+<!-- saved from url=(0069)https://learn.microsoft.com/en-us/globalization/keyboards/kbdrum.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>
+        Russian - Mnemonic Keyboard Layout
+    </title>
+    <meta name="description" content="Russian - Mnemonic Keyboard">
+    <meta name="ms.locale" content="EN-US">
+    <meta name="color-scheme" content="dark light">
+    
+    <script language="JavaScript">
+        var State = 0;
+        var Clicked = 0;
+        document.addEventListener('DOMContentLoaded', SetBackgroundColor);
+        parent.window.addEventListener('theme-changed', SetBackgroundColor);
+        function SetBackgroundColor() {
+            var theme = localStorage.getItem('theme');
+            if (theme == 'dark') {
+                document.body.style.backgroundColor = '#171717';
+            }
+            if (theme == 'high-contrast') {
+                document.body.style.backgroundColor = '#000000';
+            }
+            if (theme == 'light') {
+                document.body.style.backgroundColor = '#FFFFFF';
+            }
+            else {
+                //docs.microsoft.com theme has not been set yet. Default to browser theme.
+            }
+
+        }
+        function chooseState(x) {
+            switch (State) {
+                case 0:
+                    document.all.normallower.style.display = 'none';
+                    break;
+                case 1:
+                    document.all.normalcaps.style.display = 'none';
+                    break;
+                case 2:
+                    document.all.shiftlower.style.display = 'none';
+                    break;
+                case 3:
+                    document.all.shiftcaps.style.display = 'none';
+                    break;
+                case 4:
+                    document.all.ctrllower.style.display = 'none';
+                    break;
+                case 5:
+                    document.all.ctrlcaps.style.display = 'none';
+                    break;
+                case 6:
+                    document.all.shiftctrllower.style.display = 'none';
+                    break;
+                case 7:
+                    document.all.shiftctrlcaps.style.display = 'none';
+                    break;
+                case 8:
+                case 12:
+                    document.all.ctrlaltlower.style.display = 'none';
+                    break;
+                case 9:
+                case 13:
+                    document.all.ctrlaltcaps.style.display = 'none';
+                    break;
+                case 10:
+                case 14:
+                    document.all.shiftctrlaltlower.style.display = 'none';
+                    break;
+                case 11:
+                case 15:
+                    document.all.shiftctrlaltcaps.style.display = 'none';
+                    break;
+                case 16:
+                    document.all.xxxxlower.style.display = 'none';
+                    break;
+                case 17:
+                    document.all.xxxxcaps.style.display = 'none';
+                    break;
+                case 18:
+                    document.all.shiftxxxxlower.style.display = 'none';
+                    break;
+                case 19:
+                    document.all.shiftxxxxcaps.style.display = 'none';
+                    break;
+                default:
+                    break;
+            }
+            switch (x) {
+                case 0:
+                    document.all.normallower.style.display = '';
+                    break;
+                case 1:
+                    document.all.normalcaps.style.display = '';
+                    break;
+                case 2:
+                    document.all.shiftlower.style.display = '';
+                    break;
+                case 3:
+                    document.all.shiftcaps.style.display = '';
+                    break;
+                case 4:
+                    document.all.ctrllower.style.display = '';
+                    break;
+                case 5:
+                    document.all.ctrlcaps.style.display = '';
+                    break;
+                case 6:
+                    document.all.shiftctrllower.style.display = '';
+                    break;
+                case 7:
+                    document.all.shiftctrlcaps.style.display = '';
+                    break;
+                case 8:
+                case 12:
+                    document.all.ctrlaltlower.style.display = '';
+                    break;
+                case 9:
+                case 13:
+                    document.all.ctrlaltcaps.style.display = '';
+                    break;
+                case 10:
+                case 14:
+                    document.all.shiftctrlaltlower.style.display = '';
+                    break;
+                case 11:
+                case 15:
+                    document.all.shiftctrlaltcaps.style.display = '';
+                    break;
+                case 16:
+                    document.all.xxxxlower.style.display = '';
+                    break;
+                case 17:
+                    document.all.xxxxcaps.style.display = '';
+                    break;
+                case 18:
+                    document.all.shiftxxxxlower.style.display = '';
+                    break;
+                case 19:
+                    document.all.shiftxxxxcaps.style.display = '';
+                    break;
+                default:
+                    break;
+            }
+        }
+        function keyOpen() {
+            document.all.loading.style.display = 'none';
+            document.all.normallower.style.display = '';
+        }
+        function MouseOver(x) {
+            if ((Clicked != 1) && ((State & x) == 0)) {
+                chooseState(State | x);
+            }
+            Clicked = 0;
+        }
+        function MouseOut(x) {
+            if ((State & x) == 0) {
+                State |= x;
+                chooseState(State ^ x);
+                State ^= x;
+            }
+        }
+        function Click(x) {
+            chooseState(State ^ x);
+            State ^= x;
+            if ((State & x) == 0) {
+                Clicked = 1;
+            }
+            else {
+                Clicked = 0;
+            }
+        }
+    </script>
+</head>
+<body onload="keyOpen()">
+    <div id="glosso" style="left: 798px; top: 117px; z-index: 30; position: absolute; background: rgb(238, 238, 153); border: 1pt solid rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: arial, helvetica, geneva; font-size: 11px; padding: 2px; visibility: visible; display: none;">Click to change keyboard state</div>
+    <script type="text/javascript" language="javascript">
+        Xoffset = 10;    // modify these values to ...
+        Yoffset = 10;    // change the popup position.
+
+        var old, skn, iex = (document.all), yyy = -1000;
+
+        var ns4 = document.layers
+        var ns6 = document.getElementById && !document.all
+        var ie4 = document.all
+
+        if (window.opera) ns6 = true;
+
+        if (ns4)
+            skn = document.glosso
+        else if (ns6)
+            skn = document.getElementById("glosso").style
+        else if (ie4)
+            skn = document.all.glosso.style
+        if (ns4) document.captureEvents(Event.MOUSEMOVE);
+        else {
+            skn.visibility = "visible"
+            skn.display = "none"
+        }
+        document.onmousemove = get_mouse;
+        function popup(msg) {
+            var content = msg;
+            yyy = Yoffset;
+            if (ns4) { skn.document.write(content); skn.document.close(); skn.visibility = "visible" }
+            if (ns6) { document.getElementById("glosso").innerHTML = content; skn.display = '' }
+            //if(ie4){document.all("glosso").innerHTML=content;skn.display=''}
+        }
+        function get_mouse(e) {
+            var blont = document.getElementById("glosso").innerHTML;
+            var x = (ns4 || ns6) ? e.pageX : event.x + document.body.scrollLeft;
+            if ((x > 110) && (x < 220)) {
+                if (blont.length > 25) x -= 40;
+
+                x = x - 65;
+            }
+            if (x > 220) {
+                if (blont.length > 25) {
+                    x = x - 40;
+                }
+                if (blont.length > 45) {
+                    x = x - 40;
+                }
+                if (blont.length > 65) {
+                    x = x - 30;
+                }
+                x = x - 110;
+            }
+            skn.left = x + Xoffset;
+            var y = (ns4 || ns6) ? e.pageY : event.y + document.documentElement.scrollTop;
+            if (y > 65) {
+                y = y - 40;
+            } else {
+                y = y + 18;
+            }
+            skn.top = y;
+            //alert(content);
+        }
+        function kill() {
+            yyy = -1000;
+            if (ns4) { skn.visibility = "hidden"; }
+            else if (ns6 || ie4)
+                skn.display = "none"
+        }
+    </script>
+    <div id="loading" class="loading" style="display: none;">
+        <br><br><br>
+        <h3 align="center">Loading the keyboard layout, please wait....</h3><h3>
+    </h3></div>
+<div id="normallower" class="normallower" style="">
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/044a.png" alt="U+044A Cyrillic Small Letter Hard Sign" onmouseover="popup(&#39;U+044A Cyrillic Small Letter Hard Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0031.png" alt="U+0031 Digit One" onmouseover="popup(&#39;U+0031 Digit One&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0032.png" alt="U+0032 Digit Two" onmouseover="popup(&#39;U+0032 Digit Two&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0033.png" alt="U+0033 Digit Three" onmouseover="popup(&#39;U+0033 Digit Three&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0034.png" alt="U+0034 Digit Four" onmouseover="popup(&#39;U+0034 Digit Four&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0035.png" alt="U+0035 Digit Five" onmouseover="popup(&#39;U+0035 Digit Five&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0036.png" alt="U+0036 Digit Six" onmouseover="popup(&#39;U+0036 Digit Six&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0037.png" alt="U+0037 Digit Seven" onmouseover="popup(&#39;U+0037 Digit Seven&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0038.png" alt="U+0038 Digit Eight" onmouseover="popup(&#39;U+0038 Digit Eight&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0039.png" alt="U+0039 Digit Nine" onmouseover="popup(&#39;U+0039 Digit Nine&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0030.png" alt="U+0030 Digit Zero" onmouseover="popup(&#39;U+0030 Digit Zero&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/002d.png" alt="U+002D Hyphen-Minus" onmouseover="popup(&#39;U+002D Hyphen-Minus&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/003d.png" alt="U+003D Equals Sign" onmouseover="popup(&#39;U+003D Equals Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/BackSp.png" alt="Backspace key." width="80" height="40"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/Tab.png" alt="Tab key." width="60" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/044f.png" alt="U+044F Cyrillic Small Letter Ya" onmouseover="popup(&#39;U+044F Cyrillic Small Letter Ya&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0448.png" alt="U+0448 Cyrillic Small Letter Sha" onmouseover="popup(&#39;U+0448 Cyrillic Small Letter Sha&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0435.png" alt="U+0435 Cyrillic Small Letter Ie" onmouseover="popup(&#39;U+0435 Cyrillic Small Letter Ie&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0440.png" alt="U+0440 Cyrillic Small Letter Er" onmouseover="popup(&#39;U+0440 Cyrillic Small Letter Er&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0442.png" alt="U+0442 Cyrillic Small Letter Te" onmouseover="popup(&#39;U+0442 Cyrillic Small Letter Te&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/044bK.png" alt="U+044B Cyrillic Small Letter Yeru
+DeadKey :&#1099; &#1103; &#1101; &#1105; &#1102;" onmouseover="popup(&#39;U+044B Cyrillic Small Letter Yeru&lt;br&gt;DeadKey :&#1099; &#1103; &#1101; &#1105; &#1102;&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0443.png" alt="U+0443 Cyrillic Small Letter U" onmouseover="popup(&#39;U+0443 Cyrillic Small Letter U&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0438.png" alt="U+0438 Cyrillic Small Letter I" onmouseover="popup(&#39;U+0438 Cyrillic Small Letter I&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/043e.png" alt="U+043E Cyrillic Small Letter O" onmouseover="popup(&#39;U+043E Cyrillic Small Letter O&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/043f.png" alt="U+043F Cyrillic Small Letter Pe" onmouseover="popup(&#39;U+043F Cyrillic Small Letter Pe&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/005b.png" alt="U+005B Left Square Bracket" onmouseover="popup(&#39;U+005B Left Square Bracket&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/005d.png" alt="U+005D Right Square Bracket" onmouseover="popup(&#39;U+005D Right Square Bracket&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/EnterX.png" alt="Enter key." width="60" height="84"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/CapsLock.png" alt="Caps Lock key. Click to change keyboard state." onclick="Click(1)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(1);" onmouseout="kill();MouseOut(1);" width="80" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0430.png" alt="U+0430 Cyrillic Small Letter A" onmouseover="popup(&#39;U+0430 Cyrillic Small Letter A&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0441K.png" alt="U+0441 Cyrillic Small Letter Es
+DeadKey :&#1089; &#1097; &#1096;" onmouseover="popup(&#39;U+0441 Cyrillic Small Letter Es&lt;br&gt;DeadKey :&#1089; &#1097; &#1096;&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0434.png" alt="U+0434 Cyrillic Small Letter De" onmouseover="popup(&#39;U+0434 Cyrillic Small Letter De&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0444.png" alt="U+0444 Cyrillic Small Letter Ef" onmouseover="popup(&#39;U+0444 Cyrillic Small Letter Ef&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0433.png" alt="U+0433 Cyrillic Small Letter Ghe" onmouseover="popup(&#39;U+0433 Cyrillic Small Letter Ghe&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0445.png" alt="U+0445 Cyrillic Small Letter Ha" onmouseover="popup(&#39;U+0445 Cyrillic Small Letter Ha&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0439K.png" alt="U+0439 Cyrillic Small Letter Short I
+DeadKey :&#1081; &#1103; &#1101; &#1105; &#1102;" onmouseover="popup(&#39;U+0439 Cyrillic Small Letter Short I&lt;br&gt;DeadKey :&#1081; &#1103; &#1101; &#1105; &#1102;&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/043a.png" alt="U+043A Cyrillic Small Letter Ka" onmouseover="popup(&#39;U+043A Cyrillic Small Letter Ka&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/043b.png" alt="U+043B Cyrillic Small Letter El" onmouseover="popup(&#39;U+043B Cyrillic Small Letter El&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/003b.png" alt="U+003B Semicolon" onmouseover="popup(&#39;U+003B Semicolon&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/044c.png" alt="U+044C Cyrillic Small Letter Soft Sign" onmouseover="popup(&#39;U+044C Cyrillic Small Letter Soft Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/005c.png" alt="U+005C Reverse Solidus" onmouseover="popup(&#39;U+005C Reverse Solidus&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/None.png" alt="Blank key." width="40" height="0"></td>
+</tr></tbody></table>
+<table style="position: relative; left: 0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/NarrowShift.png" style="cursor:hand" alt="Shift key. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="60" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/005c.png" alt="U+005C Reverse Solidus" onmouseover="popup(&#39;U+005C Reverse Solidus&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0437.png" alt="U+0437 Cyrillic Small Letter Ze" onmouseover="popup(&#39;U+0437 Cyrillic Small Letter Ze&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0436.png" alt="U+0436 Cyrillic Small Letter Zhe" onmouseover="popup(&#39;U+0436 Cyrillic Small Letter Zhe&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0446K.png" alt="U+0446 Cyrillic Small Letter Tse
+DeadKey :&#1094; &#1095;" onmouseover="popup(&#39;U+0446 Cyrillic Small Letter Tse&lt;br&gt;DeadKey :&#1094; &#1095;&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0432.png" alt="U+0432 Cyrillic Small Letter Ve" onmouseover="popup(&#39;U+0432 Cyrillic Small Letter Ve&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0431.png" alt="U+0431 Cyrillic Small Letter Be" onmouseover="popup(&#39;U+0431 Cyrillic Small Letter Be&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/043d.png" alt="U+043D Cyrillic Small Letter En" onmouseover="popup(&#39;U+043D Cyrillic Small Letter En&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/043c.png" alt="U+043C Cyrillic Small Letter Em" onmouseover="popup(&#39;U+043C Cyrillic Small Letter Em&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/002c.png" alt="U+002C Comma" onmouseover="popup(&#39;U+002C Comma&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/002e.png" alt="U+002E Full Stop" onmouseover="popup(&#39;U+002E Full Stop&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/002f.png" alt="U+002F Solidus" onmouseover="popup(&#39;U+002F Solidus&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Shift.png" style="cursor:hand" alt="Shift key. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="104" height="40"></td>
+</tr></tbody></table>
+<table style="position:relative; left:0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control.png" style="cursor:hand" alt="Ctrl key." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Alt.png" alt="Alt key." width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Key4.png" alt="Spacebar key." width="308" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/AltGr.png" style="cursor:hand" alt="AltGr key. Click to change keyboard state." onclick="Click(8)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(8);" onmouseout="kill();MouseOut(8);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control_Centered.png" style="cursor:hand" alt="Ctrl key." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td></tr></tbody></table>
+</div>
+<div id="normalcaps" class="normalcaps" style="display: none;">
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/044a.png" alt="U+044A Cyrillic Small Letter Hard Sign" onmouseover="popup(&#39;U+044A Cyrillic Small Letter Hard Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0031.png" alt="U+0031 Digit One" onmouseover="popup(&#39;U+0031 Digit One&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0032.png" alt="U+0032 Digit Two" onmouseover="popup(&#39;U+0032 Digit Two&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0033.png" alt="U+0033 Digit Three" onmouseover="popup(&#39;U+0033 Digit Three&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0034.png" alt="U+0034 Digit Four" onmouseover="popup(&#39;U+0034 Digit Four&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0035.png" alt="U+0035 Digit Five" onmouseover="popup(&#39;U+0035 Digit Five&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0036.png" alt="U+0036 Digit Six" onmouseover="popup(&#39;U+0036 Digit Six&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0037.png" alt="U+0037 Digit Seven" onmouseover="popup(&#39;U+0037 Digit Seven&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0038.png" alt="U+0038 Digit Eight" onmouseover="popup(&#39;U+0038 Digit Eight&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0039.png" alt="U+0039 Digit Nine" onmouseover="popup(&#39;U+0039 Digit Nine&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0030.png" alt="U+0030 Digit Zero" onmouseover="popup(&#39;U+0030 Digit Zero&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/002d.png" alt="U+002D Hyphen-Minus" onmouseover="popup(&#39;U+002D Hyphen-Minus&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/003d.png" alt="U+003D Equals Sign" onmouseover="popup(&#39;U+003D Equals Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/BackSp.png" alt="Backspace key." width="80" height="40"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/Tab.png" alt="Tab key." width="60" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/042f.png" alt="U+042F Cyrillic Capital Letter Ya" onmouseover="popup(&#39;U+042F Cyrillic Capital Letter Ya&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0428.png" alt="U+0428 Cyrillic Capital Letter Sha" onmouseover="popup(&#39;U+0428 Cyrillic Capital Letter Sha&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0415.png" alt="U+0415 Cyrillic Capital Letter Ie" onmouseover="popup(&#39;U+0415 Cyrillic Capital Letter Ie&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0420.png" alt="U+0420 Cyrillic Capital Letter Er" onmouseover="popup(&#39;U+0420 Cyrillic Capital Letter Er&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0422.png" alt="U+0422 Cyrillic Capital Letter Te" onmouseover="popup(&#39;U+0422 Cyrillic Capital Letter Te&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/042bK.png" alt="U+042B Cyrillic Capital Letter Yeru
+DeadKey :&#1067; &#1071; &#1071; &#1069; &#1069; &#1025; &#1025; &#1070; &#1070;" onmouseover="popup(&#39;U+042B Cyrillic Capital Letter Yeru&lt;br&gt;DeadKey :&#1067; &#1071; &#1071; &#1069; &#1069; &#1025; &#1025; &#1070; &#1070;&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0423.png" alt="U+0423 Cyrillic Capital Letter U" onmouseover="popup(&#39;U+0423 Cyrillic Capital Letter U&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0418.png" alt="U+0418 Cyrillic Capital Letter I" onmouseover="popup(&#39;U+0418 Cyrillic Capital Letter I&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/041e.png" alt="U+041E Cyrillic Capital Letter O" onmouseover="popup(&#39;U+041E Cyrillic Capital Letter O&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/041f.png" alt="U+041F Cyrillic Capital Letter Pe" onmouseover="popup(&#39;U+041F Cyrillic Capital Letter Pe&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/007b.png" alt="U+007B Left Curly Bracket" onmouseover="popup(&#39;U+007B Left Curly Bracket&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/007d.png" alt="U+007D Right Curly Bracket" onmouseover="popup(&#39;U+007D Right Curly Bracket&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/EnterX.png" alt="Enter key." width="60" height="84"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/CapsLock2.png" alt="Caps Lock key with Caps Lock enabled. Click to change keyboard state." onclick="Click(1)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(1);" onmouseout="kill();MouseOut(1);" width="80" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0410.png" alt="U+0410 Cyrillic Capital Letter A" onmouseover="popup(&#39;U+0410 Cyrillic Capital Letter A&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0421K.png" alt="U+0421 Cyrillic Capital Letter Es
+DeadKey :&#1057; &#1065; &#1065; &#1064; &#1064;" onmouseover="popup(&#39;U+0421 Cyrillic Capital Letter Es&lt;br&gt;DeadKey :&#1057; &#1065; &#1065; &#1064; &#1064;&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0414.png" alt="U+0414 Cyrillic Capital Letter De" onmouseover="popup(&#39;U+0414 Cyrillic Capital Letter De&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0424.png" alt="U+0424 Cyrillic Capital Letter Ef" onmouseover="popup(&#39;U+0424 Cyrillic Capital Letter Ef&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0413.png" alt="U+0413 Cyrillic Capital Letter Ghe" onmouseover="popup(&#39;U+0413 Cyrillic Capital Letter Ghe&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0425.png" alt="U+0425 Cyrillic Capital Letter Ha" onmouseover="popup(&#39;U+0425 Cyrillic Capital Letter Ha&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0419K.png" alt="U+0419 Cyrillic Capital Letter Short I
+DeadKey :&#1049; &#1071; &#1071; &#1069; &#1069; &#1025; &#1025; &#1070; &#1070;" onmouseover="popup(&#39;U+0419 Cyrillic Capital Letter Short I&lt;br&gt;DeadKey :&#1049; &#1071; &#1071; &#1069; &#1069; &#1025; &#1025; &#1070; &#1070;&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/041a.png" alt="U+041A Cyrillic Capital Letter Ka" onmouseover="popup(&#39;U+041A Cyrillic Capital Letter Ka&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/041b.png" alt="U+041B Cyrillic Capital Letter El" onmouseover="popup(&#39;U+041B Cyrillic Capital Letter El&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/003a.png" alt="U+003A Colon" onmouseover="popup(&#39;U+003A Colon&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/042c.png" alt="U+042C Cyrillic Capital Letter Soft Sign" onmouseover="popup(&#39;U+042C Cyrillic Capital Letter Soft Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/005c.png" alt="U+005C Reverse Solidus" onmouseover="popup(&#39;U+005C Reverse Solidus&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/None.png" alt="Blank key." width="40" height="0"></td>
+</tr></tbody></table>
+<table style="position: relative; left: 0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/NarrowShift.png" style="cursor:hand" alt="Shift key. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="60" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/005c.png" alt="U+005C Reverse Solidus" onmouseover="popup(&#39;U+005C Reverse Solidus&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0417.png" alt="U+0417 Cyrillic Capital Letter Ze" onmouseover="popup(&#39;U+0417 Cyrillic Capital Letter Ze&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0416.png" alt="U+0416 Cyrillic Capital Letter Zhe" onmouseover="popup(&#39;U+0416 Cyrillic Capital Letter Zhe&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0426K.png" alt="U+0426 Cyrillic Capital Letter Tse
+DeadKey :&#1062; &#1063; &#1063;" onmouseover="popup(&#39;U+0426 Cyrillic Capital Letter Tse&lt;br&gt;DeadKey :&#1062; &#1063; &#1063;&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0412.png" alt="U+0412 Cyrillic Capital Letter Ve" onmouseover="popup(&#39;U+0412 Cyrillic Capital Letter Ve&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0411.png" alt="U+0411 Cyrillic Capital Letter Be" onmouseover="popup(&#39;U+0411 Cyrillic Capital Letter Be&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/041d.png" alt="U+041D Cyrillic Capital Letter En" onmouseover="popup(&#39;U+041D Cyrillic Capital Letter En&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/041c.png" alt="U+041C Cyrillic Capital Letter Em" onmouseover="popup(&#39;U+041C Cyrillic Capital Letter Em&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/003c.png" alt="U+003C Less-Than Sign" onmouseover="popup(&#39;U+003C Less-Than Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/003e.png" alt="U+003E Greater-Than Sign" onmouseover="popup(&#39;U+003E Greater-Than Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/002f.png" alt="U+002F Solidus" onmouseover="popup(&#39;U+002F Solidus&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Shift.png" style="cursor:hand" alt="Shift key. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="104" height="40"></td>
+</tr></tbody></table>
+<table style="position:relative; left:0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control.png" style="cursor:hand" alt="Ctrl key." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Alt.png" alt="Alt key." width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Key4.png" alt="Spacebar key." width="308" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/AltGr.png" style="cursor:hand" alt="AltGr key. Click to change keyboard state." onclick="Click(8)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(8);" onmouseout="kill();MouseOut(8);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control_Centered.png" style="cursor:hand" alt="Ctrl key." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td></tr></tbody></table>
+</div>
+<div id="shiftlower" class="shiftlower" style="display: none;">
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/042a.png" alt="U+042A Cyrillic Capital Letter Hard Sign" onmouseover="popup(&#39;U+042A Cyrillic Capital Letter Hard Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0021.png" alt="U+0021 Exclamation Mark" onmouseover="popup(&#39;U+0021 Exclamation Mark&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0022.png" alt="U+0022 Quotation Mark" onmouseover="popup(&#39;U+0022 Quotation Mark&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/2116.png" alt="U+2116 Numero Sign" onmouseover="popup(&#39;U+2116 Numero Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/003b.png" alt="U+003B Semicolon" onmouseover="popup(&#39;U+003B Semicolon&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0025.png" alt="U+0025 Percent Sign" onmouseover="popup(&#39;U+0025 Percent Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/003a.png" alt="U+003A Colon" onmouseover="popup(&#39;U+003A Colon&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/003f.png" alt="U+003F Question Mark" onmouseover="popup(&#39;U+003F Question Mark&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/002a.png" alt="U+002A Asterisk" onmouseover="popup(&#39;U+002A Asterisk&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0028.png" alt="U+0028 Left Parenthesis" onmouseover="popup(&#39;U+0028 Left Parenthesis&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0029.png" alt="U+0029 Right Parenthesis" onmouseover="popup(&#39;U+0029 Right Parenthesis&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/005f.png" alt="U+005F Low Line" onmouseover="popup(&#39;U+005F Low Line&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/002b.png" alt="U+002B Plus Sign" onmouseover="popup(&#39;U+002B Plus Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/BackSp.png" alt="Backspace key." width="80" height="40"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/Tab.png" alt="Tab key." width="60" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/042f.png" alt="U+042F Cyrillic Capital Letter Ya" onmouseover="popup(&#39;U+042F Cyrillic Capital Letter Ya&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0428.png" alt="U+0428 Cyrillic Capital Letter Sha" onmouseover="popup(&#39;U+0428 Cyrillic Capital Letter Sha&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0415.png" alt="U+0415 Cyrillic Capital Letter Ie" onmouseover="popup(&#39;U+0415 Cyrillic Capital Letter Ie&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0420.png" alt="U+0420 Cyrillic Capital Letter Er" onmouseover="popup(&#39;U+0420 Cyrillic Capital Letter Er&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0422.png" alt="U+0422 Cyrillic Capital Letter Te" onmouseover="popup(&#39;U+0422 Cyrillic Capital Letter Te&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/042bK.png" alt="U+042B Cyrillic Capital Letter Yeru
+DeadKey :&#1067; &#1071; &#1071; &#1069; &#1069; &#1025; &#1025; &#1070; &#1070;" onmouseover="popup(&#39;U+042B Cyrillic Capital Letter Yeru&lt;br&gt;DeadKey :&#1067; &#1071; &#1071; &#1069; &#1069; &#1025; &#1025; &#1070; &#1070;&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0423.png" alt="U+0423 Cyrillic Capital Letter U" onmouseover="popup(&#39;U+0423 Cyrillic Capital Letter U&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0418.png" alt="U+0418 Cyrillic Capital Letter I" onmouseover="popup(&#39;U+0418 Cyrillic Capital Letter I&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/041e.png" alt="U+041E Cyrillic Capital Letter O" onmouseover="popup(&#39;U+041E Cyrillic Capital Letter O&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/041f.png" alt="U+041F Cyrillic Capital Letter Pe" onmouseover="popup(&#39;U+041F Cyrillic Capital Letter Pe&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/007b.png" alt="U+007B Left Curly Bracket" onmouseover="popup(&#39;U+007B Left Curly Bracket&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/007d.png" alt="U+007D Right Curly Bracket" onmouseover="popup(&#39;U+007D Right Curly Bracket&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/EnterX.png" alt="Enter key." width="60" height="84"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/CapsLock.png" alt="Caps Lock key. Click to change keyboard state." onclick="Click(1)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(1);" onmouseout="kill();MouseOut(1);" width="80" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0410.png" alt="U+0410 Cyrillic Capital Letter A" onmouseover="popup(&#39;U+0410 Cyrillic Capital Letter A&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0421K.png" alt="U+0421 Cyrillic Capital Letter Es
+DeadKey :&#1057; &#1065; &#1065; &#1064; &#1064;" onmouseover="popup(&#39;U+0421 Cyrillic Capital Letter Es&lt;br&gt;DeadKey :&#1057; &#1065; &#1065; &#1064; &#1064;&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0414.png" alt="U+0414 Cyrillic Capital Letter De" onmouseover="popup(&#39;U+0414 Cyrillic Capital Letter De&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0424.png" alt="U+0424 Cyrillic Capital Letter Ef" onmouseover="popup(&#39;U+0424 Cyrillic Capital Letter Ef&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0413.png" alt="U+0413 Cyrillic Capital Letter Ghe" onmouseover="popup(&#39;U+0413 Cyrillic Capital Letter Ghe&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0425.png" alt="U+0425 Cyrillic Capital Letter Ha" onmouseover="popup(&#39;U+0425 Cyrillic Capital Letter Ha&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0419K.png" alt="U+0419 Cyrillic Capital Letter Short I
+DeadKey :&#1049; &#1071; &#1071; &#1069; &#1069; &#1025; &#1025; &#1070; &#1070;" onmouseover="popup(&#39;U+0419 Cyrillic Capital Letter Short I&lt;br&gt;DeadKey :&#1049; &#1071; &#1071; &#1069; &#1069; &#1025; &#1025; &#1070; &#1070;&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/041a.png" alt="U+041A Cyrillic Capital Letter Ka" onmouseover="popup(&#39;U+041A Cyrillic Capital Letter Ka&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/041b.png" alt="U+041B Cyrillic Capital Letter El" onmouseover="popup(&#39;U+041B Cyrillic Capital Letter El&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/003a.png" alt="U+003A Colon" onmouseover="popup(&#39;U+003A Colon&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/042c.png" alt="U+042C Cyrillic Capital Letter Soft Sign" onmouseover="popup(&#39;U+042C Cyrillic Capital Letter Soft Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/002f.png" alt="U+002F Solidus" onmouseover="popup(&#39;U+002F Solidus&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/None.png" alt="Blank key." width="40" height="0"></td>
+</tr></tbody></table>
+<table style="position: relative; left: 0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/NarrowShift2.png" style="cursor:hand" alt="Shift key with Shift enabled. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="60" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/002f.png" alt="U+002F Solidus" onmouseover="popup(&#39;U+002F Solidus&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0417.png" alt="U+0417 Cyrillic Capital Letter Ze" onmouseover="popup(&#39;U+0417 Cyrillic Capital Letter Ze&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0416.png" alt="U+0416 Cyrillic Capital Letter Zhe" onmouseover="popup(&#39;U+0416 Cyrillic Capital Letter Zhe&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0426K.png" alt="U+0426 Cyrillic Capital Letter Tse
+DeadKey :&#1062; &#1063; &#1063;" onmouseover="popup(&#39;U+0426 Cyrillic Capital Letter Tse&lt;br&gt;DeadKey :&#1062; &#1063; &#1063;&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0412.png" alt="U+0412 Cyrillic Capital Letter Ve" onmouseover="popup(&#39;U+0412 Cyrillic Capital Letter Ve&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0411.png" alt="U+0411 Cyrillic Capital Letter Be" onmouseover="popup(&#39;U+0411 Cyrillic Capital Letter Be&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/041d.png" alt="U+041D Cyrillic Capital Letter En" onmouseover="popup(&#39;U+041D Cyrillic Capital Letter En&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/041c.png" alt="U+041C Cyrillic Capital Letter Em" onmouseover="popup(&#39;U+041C Cyrillic Capital Letter Em&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/003c.png" alt="U+003C Less-Than Sign" onmouseover="popup(&#39;U+003C Less-Than Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/003e.png" alt="U+003E Greater-Than Sign" onmouseover="popup(&#39;U+003E Greater-Than Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/003f.png" alt="U+003F Question Mark" onmouseover="popup(&#39;U+003F Question Mark&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Shift2.png" style="cursor:hand" alt="Shift key with Shift enabled. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="104" height="40"></td>
+</tr></tbody></table>
+<table style="position:relative; left:0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control.png" style="cursor:hand" alt="Ctrl key." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Alt.png" alt="Alt key." width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Key4.png" alt="Spacebar key." width="308" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/AltGr.png" style="cursor:hand" alt="AltGr key. Click to change keyboard state." onclick="Click(8)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(8);" onmouseout="kill();MouseOut(8);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control_Centered.png" style="cursor:hand" alt="Ctrl key." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td></tr></tbody></table>
+</div>
+<div id="shiftcaps" class="shiftcaps" style="display: none">
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/042a.png" alt="U+042A Cyrillic Capital Letter Hard Sign" onmouseover="popup(&#39;U+042A Cyrillic Capital Letter Hard Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0021.png" alt="U+0021 Exclamation Mark" onmouseover="popup(&#39;U+0021 Exclamation Mark&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0022.png" alt="U+0022 Quotation Mark" onmouseover="popup(&#39;U+0022 Quotation Mark&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/2116.png" alt="U+2116 Numero Sign" onmouseover="popup(&#39;U+2116 Numero Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/003b.png" alt="U+003B Semicolon" onmouseover="popup(&#39;U+003B Semicolon&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0025.png" alt="U+0025 Percent Sign" onmouseover="popup(&#39;U+0025 Percent Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/003a.png" alt="U+003A Colon" onmouseover="popup(&#39;U+003A Colon&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/003f.png" alt="U+003F Question Mark" onmouseover="popup(&#39;U+003F Question Mark&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/002a.png" alt="U+002A Asterisk" onmouseover="popup(&#39;U+002A Asterisk&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0028.png" alt="U+0028 Left Parenthesis" onmouseover="popup(&#39;U+0028 Left Parenthesis&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0029.png" alt="U+0029 Right Parenthesis" onmouseover="popup(&#39;U+0029 Right Parenthesis&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/005f.png" alt="U+005F Low Line" onmouseover="popup(&#39;U+005F Low Line&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/002b.png" alt="U+002B Plus Sign" onmouseover="popup(&#39;U+002B Plus Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/BackSp.png" alt="Backspace key." width="80" height="40"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/Tab.png" alt="Tab key." width="60" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/044f.png" alt="U+044F Cyrillic Small Letter Ya" onmouseover="popup(&#39;U+044F Cyrillic Small Letter Ya&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0448.png" alt="U+0448 Cyrillic Small Letter Sha" onmouseover="popup(&#39;U+0448 Cyrillic Small Letter Sha&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0435.png" alt="U+0435 Cyrillic Small Letter Ie" onmouseover="popup(&#39;U+0435 Cyrillic Small Letter Ie&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0440.png" alt="U+0440 Cyrillic Small Letter Er" onmouseover="popup(&#39;U+0440 Cyrillic Small Letter Er&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0442.png" alt="U+0442 Cyrillic Small Letter Te" onmouseover="popup(&#39;U+0442 Cyrillic Small Letter Te&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/044bK.png" alt="U+044B Cyrillic Small Letter Yeru
+DeadKey :&#1099; &#1103; &#1101; &#1105; &#1102;" onmouseover="popup(&#39;U+044B Cyrillic Small Letter Yeru&lt;br&gt;DeadKey :&#1099; &#1103; &#1101; &#1105; &#1102;&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0443.png" alt="U+0443 Cyrillic Small Letter U" onmouseover="popup(&#39;U+0443 Cyrillic Small Letter U&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0438.png" alt="U+0438 Cyrillic Small Letter I" onmouseover="popup(&#39;U+0438 Cyrillic Small Letter I&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/043e.png" alt="U+043E Cyrillic Small Letter O" onmouseover="popup(&#39;U+043E Cyrillic Small Letter O&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/043f.png" alt="U+043F Cyrillic Small Letter Pe" onmouseover="popup(&#39;U+043F Cyrillic Small Letter Pe&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/005b.png" alt="U+005B Left Square Bracket" onmouseover="popup(&#39;U+005B Left Square Bracket&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/005d.png" alt="U+005D Right Square Bracket" onmouseover="popup(&#39;U+005D Right Square Bracket&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/EnterX.png" alt="Enter key." width="60" height="84"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/CapsLock2.png" alt="Caps Lock key with Caps Lock enabled. Click to change keyboard state." onclick="Click(1)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(1);" onmouseout="kill();MouseOut(1);" width="80" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0430.png" alt="U+0430 Cyrillic Small Letter A" onmouseover="popup(&#39;U+0430 Cyrillic Small Letter A&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0441K.png" alt="U+0441 Cyrillic Small Letter Es
+DeadKey :&#1089; &#1097; &#1096;" onmouseover="popup(&#39;U+0441 Cyrillic Small Letter Es&lt;br&gt;DeadKey :&#1089; &#1097; &#1096;&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0434.png" alt="U+0434 Cyrillic Small Letter De" onmouseover="popup(&#39;U+0434 Cyrillic Small Letter De&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0444.png" alt="U+0444 Cyrillic Small Letter Ef" onmouseover="popup(&#39;U+0444 Cyrillic Small Letter Ef&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0433.png" alt="U+0433 Cyrillic Small Letter Ghe" onmouseover="popup(&#39;U+0433 Cyrillic Small Letter Ghe&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0445.png" alt="U+0445 Cyrillic Small Letter Ha" onmouseover="popup(&#39;U+0445 Cyrillic Small Letter Ha&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0439K.png" alt="U+0439 Cyrillic Small Letter Short I
+DeadKey :&#1081; &#1103; &#1101; &#1105; &#1102;" onmouseover="popup(&#39;U+0439 Cyrillic Small Letter Short I&lt;br&gt;DeadKey :&#1081; &#1103; &#1101; &#1105; &#1102;&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/043a.png" alt="U+043A Cyrillic Small Letter Ka" onmouseover="popup(&#39;U+043A Cyrillic Small Letter Ka&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/043b.png" alt="U+043B Cyrillic Small Letter El" onmouseover="popup(&#39;U+043B Cyrillic Small Letter El&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/003b.png" alt="U+003B Semicolon" onmouseover="popup(&#39;U+003B Semicolon&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/044c.png" alt="U+044C Cyrillic Small Letter Soft Sign" onmouseover="popup(&#39;U+044C Cyrillic Small Letter Soft Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/002f.png" alt="U+002F Solidus" onmouseover="popup(&#39;U+002F Solidus&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/None.png" alt="Blank key." width="40" height="0"></td>
+</tr></tbody></table>
+<table style="position: relative; left: 0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/NarrowShift2.png" style="cursor:hand" alt="Shift key with Shift enabled. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="60" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/002f.png" alt="U+002F Solidus" onmouseover="popup(&#39;U+002F Solidus&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0437.png" alt="U+0437 Cyrillic Small Letter Ze" onmouseover="popup(&#39;U+0437 Cyrillic Small Letter Ze&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0436.png" alt="U+0436 Cyrillic Small Letter Zhe" onmouseover="popup(&#39;U+0436 Cyrillic Small Letter Zhe&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0446K.png" alt="U+0446 Cyrillic Small Letter Tse
+DeadKey :&#1094; &#1095;" onmouseover="popup(&#39;U+0446 Cyrillic Small Letter Tse&lt;br&gt;DeadKey :&#1094; &#1095;&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0432.png" alt="U+0432 Cyrillic Small Letter Ve" onmouseover="popup(&#39;U+0432 Cyrillic Small Letter Ve&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0431.png" alt="U+0431 Cyrillic Small Letter Be" onmouseover="popup(&#39;U+0431 Cyrillic Small Letter Be&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/043d.png" alt="U+043D Cyrillic Small Letter En" onmouseover="popup(&#39;U+043D Cyrillic Small Letter En&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/043c.png" alt="U+043C Cyrillic Small Letter Em" onmouseover="popup(&#39;U+043C Cyrillic Small Letter Em&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/002c.png" alt="U+002C Comma" onmouseover="popup(&#39;U+002C Comma&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/002e.png" alt="U+002E Full Stop" onmouseover="popup(&#39;U+002E Full Stop&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/003f.png" alt="U+003F Question Mark" onmouseover="popup(&#39;U+003F Question Mark&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Shift2.png" style="cursor:hand" alt="Shift key with Shift enabled. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="104" height="40"></td>
+</tr></tbody></table>
+<table style="position:relative; left:0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control.png" style="cursor:hand" alt="Ctrl key." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Alt.png" alt="Alt key." width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Key4.png" alt="Spacebar key." width="308" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/AltGr.png" style="cursor:hand" alt="AltGr key. Click to change keyboard state." onclick="Click(8)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(8);" onmouseout="kill();MouseOut(8);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control_Centered.png" style="cursor:hand" alt="Ctrl key." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td></tr></tbody></table>
+</div>
+<div id="ctrllower" class="ctrllower" style="display: none;">
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/BackSp.png" alt="Backspace key." width="80" height="40"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/Tab.png" alt="Tab key." width="60" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/EnterX.png" alt="Enter key." width="60" height="84"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/CapsLock.png" alt="Caps Lock key. Click to change keyboard state." onclick="Click(1)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(1);" onmouseout="kill();MouseOut(1);" width="80" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/None.png" alt="Blank key." width="40" height="0"></td>
+</tr></tbody></table>
+<table style="position: relative; left: 0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/NarrowShift.png" style="cursor:hand" alt="Shift key. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="60" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Shift.png" style="cursor:hand" alt="Shift key. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="104" height="40"></td>
+</tr></tbody></table>
+<table style="position:relative; left:0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control2.png" style="cursor:hand" alt="Ctrl key with Ctrl enabled." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Alt.png" alt="Alt key." width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Key4.png" alt="Spacebar key." width="308" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/AltGr.png" style="cursor:hand" alt="AltGr key. Click to change keyboard state." onclick="Click(8)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(8);" onmouseout="kill();MouseOut(8);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control_Centered2.png" style="cursor:hand" alt="Ctrl key with Ctrl enabled." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td></tr></tbody></table>
+</div>
+<div id="ctrlcaps" class="ctrlcaps" style="display: none">
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/BackSp.png" alt="Backspace key." width="80" height="40"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/Tab.png" alt="Tab key." width="60" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/EnterX.png" alt="Enter key." width="60" height="84"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/CapsLock2.png" alt="Caps Lock key with Caps Lock enabled. Click to change keyboard state." onclick="Click(1)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(1);" onmouseout="kill();MouseOut(1);" width="80" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/None.png" alt="Blank key." width="40" height="0"></td>
+</tr></tbody></table>
+<table style="position: relative; left: 0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/NarrowShift.png" style="cursor:hand" alt="Shift key. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="60" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Shift.png" style="cursor:hand" alt="Shift key. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="104" height="40"></td>
+</tr></tbody></table>
+<table style="position:relative; left:0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control2.png" style="cursor:hand" alt="Ctrl key with Ctrl enabled." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Alt.png" alt="Alt key." width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Key4.png" alt="Spacebar key." width="308" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/AltGr.png" style="cursor:hand" alt="AltGr key. Click to change keyboard state." onclick="Click(8)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(8);" onmouseout="kill();MouseOut(8);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control_Centered2.png" style="cursor:hand" alt="Ctrl key with Ctrl enabled." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td></tr></tbody></table>
+</div>
+<div id="shiftctrllower" class="shiftctrllower" style="display: none">
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/BackSp.png" alt="Backspace key." width="80" height="40"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/Tab.png" alt="Tab key." width="60" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/EnterX.png" alt="Enter key." width="60" height="84"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/CapsLock.png" alt="Caps Lock key. Click to change keyboard state." onclick="Click(1)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(1);" onmouseout="kill();MouseOut(1);" width="80" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/None.png" alt="Blank key." width="40" height="0"></td>
+</tr></tbody></table>
+<table style="position: relative; left: 0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/NarrowShift2.png" style="cursor:hand" alt="Shift key with Shift enabled. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="60" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Shift2.png" style="cursor:hand" alt="Shift key with Shift enabled. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="104" height="40"></td>
+</tr></tbody></table>
+<table style="position:relative; left:0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control2.png" style="cursor:hand" alt="Ctrl key with Ctrl enabled." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Alt.png" alt="Alt key." width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Key4.png" alt="Spacebar key." width="308" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/AltGr.png" style="cursor:hand" alt="AltGr key. Click to change keyboard state." onclick="Click(8)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(8);" onmouseout="kill();MouseOut(8);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control_Centered2.png" style="cursor:hand" alt="Ctrl key with Ctrl enabled." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td></tr></tbody></table>
+</div>
+<div id="shiftctrlcaps" class="shiftctrlcaps" style="display: none">
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/BackSp.png" alt="Backspace key." width="80" height="40"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/Tab.png" alt="Tab key." width="60" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/EnterX.png" alt="Enter key." width="60" height="84"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/CapsLock2.png" alt="Caps Lock key with Caps Lock enabled. Click to change keyboard state." onclick="Click(1)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(1);" onmouseout="kill();MouseOut(1);" width="80" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/None.png" alt="Blank key." width="40" height="0"></td>
+</tr></tbody></table>
+<table style="position: relative; left: 0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/NarrowShift2.png" style="cursor:hand" alt="Shift key with Shift enabled. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="60" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Shift2.png" style="cursor:hand" alt="Shift key with Shift enabled. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="104" height="40"></td>
+</tr></tbody></table>
+<table style="position:relative; left:0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control2.png" style="cursor:hand" alt="Ctrl key with Ctrl enabled." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Alt.png" alt="Alt key." width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Key4.png" alt="Spacebar key." width="308" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/AltGr.png" style="cursor:hand" alt="AltGr key. Click to change keyboard state." onclick="Click(8)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(8);" onmouseout="kill();MouseOut(8);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control_Centered2.png" style="cursor:hand" alt="Ctrl key with Ctrl enabled." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td></tr></tbody></table>
+</div>
+<div id="ctrlaltlower" class="ctrlaltlower" style="display: none;">
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/00a8K.png" alt="U+00A8 Diaeresis
+DeadKey :¨ &#1101; &#1069; &#1098; &#1066; &#1095; &#1063; &#1105; &#1025; &#1107; &#1027; &#1111; &#1031; &#1105; &#1025; &#1096; &#1064; &#1102; &#1070; &#1097; &#1065; &#1118; &#1038; &#1078; &#1046; `" onmouseover="popup(&#39;U+00A8 Diaeresis&lt;br&gt;DeadKey :¨ &#1101; &#1069; &#1098; &#1066; &#1095; &#1063; &#1105; &#1025; &#1107; &#1027; &#1111; &#1031; &#1105; &#1025; &#1096; &#1064; &#1102; &#1070; &#1097; &#1065; &#1118; &#1038; &#1078; &#1046; `&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/20bd.png" alt="U+20BD Ruble Sign" onmouseover="popup(&#39;U+20BD Ruble Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/BackSp.png" alt="Backspace key." width="80" height="40"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/Tab.png" alt="Tab key." width="60" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/EnterX.png" alt="Enter key." width="60" height="84"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/CapsLock.png" alt="Caps Lock key. Click to change keyboard state." onclick="Click(1)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(1);" onmouseout="kill();MouseOut(1);" width="80" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/2019.png" alt="U+2019 Right Single Quotation Mark" onmouseover="popup(&#39;U+2019 Right Single Quotation Mark&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/None.png" alt="Blank key." width="40" height="0"></td>
+</tr></tbody></table>
+<table style="position: relative; left: 0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/NarrowShift.png" style="cursor:hand" alt="Shift key. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="60" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Shift.png" style="cursor:hand" alt="Shift key. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="104" height="40"></td>
+</tr></tbody></table>
+<table style="position:relative; left:0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control2.png" style="cursor:hand" alt="Ctrl key with Ctrl enabled." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Alt.png" alt="Alt key." width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Key4.png" alt="Spacebar key." width="308" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/AltGr2.png" style="cursor:hand" alt="AltGr key with AltGr enabled. Click to change keyboard state." onclick="Click(8)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(8);" onmouseout="kill();MouseOut(8);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control_Centered.png" style="cursor:hand" alt="Ctrl key." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td></tr></tbody></table>
+</div>
+<div id="ctrlaltcaps" class="ctrlaltcaps" style="display: none">
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/00a8K.png" alt="U+00A8 Diaeresis
+DeadKey :¨ &#1101; &#1069; &#1098; &#1066; &#1095; &#1063; &#1105; &#1025; &#1107; &#1027; &#1111; &#1031; &#1105; &#1025; &#1096; &#1064; &#1102; &#1070; &#1097; &#1065; &#1118; &#1038; &#1078; &#1046; `" onmouseover="popup(&#39;U+00A8 Diaeresis&lt;br&gt;DeadKey :¨ &#1101; &#1069; &#1098; &#1066; &#1095; &#1063; &#1105; &#1025; &#1107; &#1027; &#1111; &#1031; &#1105; &#1025; &#1096; &#1064; &#1102; &#1070; &#1097; &#1065; &#1118; &#1038; &#1078; &#1046; `&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/20bd.png" alt="U+20BD Ruble Sign" onmouseover="popup(&#39;U+20BD Ruble Sign&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/BackSp.png" alt="Backspace key." width="80" height="40"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/Tab.png" alt="Tab key." width="60" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/EnterX.png" alt="Enter key." width="60" height="84"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/CapsLock2.png" alt="Caps Lock key with Caps Lock enabled. Click to change keyboard state." onclick="Click(1)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(1);" onmouseout="kill();MouseOut(1);" width="80" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/2019.png" alt="U+2019 Right Single Quotation Mark" onmouseover="popup(&#39;U+2019 Right Single Quotation Mark&#39;);" onmouseout="kill();" width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/None.png" alt="Blank key." width="40" height="0"></td>
+</tr></tbody></table>
+<table style="position: relative; left: 0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/NarrowShift.png" style="cursor:hand" alt="Shift key. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="60" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Shift.png" style="cursor:hand" alt="Shift key. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="104" height="40"></td>
+</tr></tbody></table>
+<table style="position:relative; left:0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control2.png" style="cursor:hand" alt="Ctrl key with Ctrl enabled." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Alt.png" alt="Alt key." width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Key4.png" alt="Spacebar key." width="308" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/AltGr2.png" style="cursor:hand" alt="AltGr key with AltGr enabled. Click to change keyboard state." onclick="Click(8)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(8);" onmouseout="kill();MouseOut(8);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control_Centered.png" style="cursor:hand" alt="Ctrl key." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td></tr></tbody></table>
+</div>
+<div id="shiftctrlaltlower" class="shiftctrlaltlower" style="display: none">
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/BackSp.png" alt="Backspace key." width="80" height="40"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/Tab.png" alt="Tab key." width="60" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/EnterX.png" alt="Enter key." width="60" height="84"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/CapsLock.png" alt="Caps Lock key. Click to change keyboard state." onclick="Click(1)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(1);" onmouseout="kill();MouseOut(1);" width="80" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/None.png" alt="Blank key." width="40" height="0"></td>
+</tr></tbody></table>
+<table style="position: relative; left: 0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/NarrowShift2.png" style="cursor:hand" alt="Shift key with Shift enabled. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="60" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Shift2.png" style="cursor:hand" alt="Shift key with Shift enabled. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="104" height="40"></td>
+</tr></tbody></table>
+<table style="position:relative; left:0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control2.png" style="cursor:hand" alt="Ctrl key with Ctrl enabled." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Alt.png" alt="Alt key." width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Key4.png" alt="Spacebar key." width="308" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/AltGr2.png" style="cursor:hand" alt="AltGr key with AltGr enabled. Click to change keyboard state." onclick="Click(8)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(8);" onmouseout="kill();MouseOut(8);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control_Centered.png" style="cursor:hand" alt="Ctrl key." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td></tr></tbody></table>
+</div>
+<div id="shiftctrlaltcaps" class="shiftctrlaltcaps" style="display: none">
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/BackSp.png" alt="Backspace key." width="80" height="40"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/Tab.png" alt="Tab key." width="60" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-22" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/EnterX.png" alt="Enter key." width="60" height="84"></td>
+</tr></tbody></table>
+<table width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8"><tbody><tr>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/CapsLock2.png" alt="Caps Lock key with Caps Lock enabled. Click to change keyboard state." onclick="Click(1)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(1);" onmouseout="kill();MouseOut(1);" width="80" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img style="position:relative; left:0; top:-44" src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/None.png" alt="Blank key." width="40" height="0"></td>
+</tr></tbody></table>
+<table style="position: relative; left: 0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/NarrowShift2.png" style="cursor:hand" alt="Shift key with Shift enabled. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="60" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/0000.png" alt="Blank key." width="40" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Shift2.png" style="cursor:hand" alt="Shift key with Shift enabled. Click to change keyboard state." onclick="Click(2)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(2);" onmouseout="kill();MouseOut(2);" width="104" height="40"></td>
+</tr></tbody></table>
+<table style="position:relative; left:0; top:-44" width="640" height="40" border="0" cellspacing="0" padding="0" bgcolor="#C8C8C8">
+<tbody><tr><td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control2.png" style="cursor:hand" alt="Ctrl key with Ctrl enabled." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Alt.png" alt="Alt key." width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Key4.png" alt="Spacebar key." width="308" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/AltGr2.png" style="cursor:hand" alt="AltGr key with AltGr enabled. Click to change keyboard state." onclick="Click(8)" onmouseover="popup(&#39;Click to change keyboard state&#39;);MouseOver(8);" onmouseout="kill();MouseOut(8);" width="80" height="40"></td>
+<td><img src="./Windows_RussianMnemonicKeyboardLayout_files/Control_Centered.png" style="cursor:hand" alt="Ctrl key." onmouseover="MouseOver(4);" onmouseout="MouseOut(4);" width="80" height="40"></td></tr></tbody></table>
+</div>
+
+
+
+</body></html>
