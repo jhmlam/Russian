@@ -8,8 +8,8 @@ This article provides a guide to do the followings on a Windows 11 computer
 
 We are grateful to the following resources!
 * [Annie Platoff from UCSB.](https://guides.library.ucsb.edu/slavic/russkii) Some of the lines below are directly copied. 
-
-
+* [Gringos Keyboard.](http://shininghappypeople.net/deljr/gringos/vista/index.htm) Add-on to allow phonetic keyboard.
+* [Example of Phonetic Keyboard](https://learn.microsoft.com/en-us/globalization/keyboards/kbdrum.html)
 # Keyboard
 
 As language learners, we will only use the phonetic keyboard on your computer (basically this means your american laptop...). Here is a summary of 2023 from Annie Platoff.
