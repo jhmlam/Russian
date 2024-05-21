@@ -72,6 +72,10 @@ Look similar ones
 * ![image](https://github.com/jhmlam/Russian/assets/33080741/88df8360-c030-4c0c-b952-a7a5d203c9ab)
 
 
+## Some example of Slavic mixture
+* ДМІТРИЙ
+
+
 # Writing
 ## Russian Keyboards
 * [JCUKEN](https://en.wikipedia.org/wiki/JCUKEN)
