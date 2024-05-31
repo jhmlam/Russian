@@ -290,3 +290,52 @@ Similar Pronunciation + Contradictory Meaning. I ask it to give something like g
 78. **экспресс** (ekspress) - express train (not necessarily express as in quick)
 79. **этикет** (etiket) - etiquette (similar but used more broadly)
 80. **ювелир** (yuvelir) - jeweler (not necessarily related to the word jewelry)
+
+# Russian-English Cognate Suffix Mapping Rules
+
+Here are common suffixes in Russian-English cognates along with their mappings.
+
+## -ция (-tsiya) to -tion
+- информация (informatsiya) - information
+- организация (organizatsiya) - organization
+- презентация (prezentatsiya) - presentation
+
+## -изм (-izm) to -ism
+- туризм (turizm) - tourism
+- социализм (sotsializm) - socialism
+- реализм (realizm) - realism
+
+## -ия (-iya) to -y or -ia
+- биология (biologiya) - biology
+- философия (filosofiya) - philosophy
+- психология (psikhologiya) - psychology
+
+## -ный (-ny) to -al or -ic
+- реальный (realny) - real
+- технический (tekhnichesky) - technical
+- исторический (istorichesky) - historical
+
+## -тор (-tor) to -tor or -ter
+- директор (direktor) - director
+- актер (akter) - actor
+- редактор (redaktor) - editor
+
+## -ический (-ichesky) to -ical
+- политический (politichesky) - political
+- математический (matematichesky) - mathematical
+- физический (fizichesky) - physical
+
+## -ист (-ist) to -ist
+- артист (artist) - artist
+- пианист (pianist) - pianist
+- турист (turist) - tourist
+
+## -ия (-iya) to -y or -ia (used for disciplines or concepts)
+- экономика (ekonomika) - economy
+- стратегия (strategiya) - strategy
+- энергия (energiya) - energy
+
+## -альный (-alny) to -al
+- национальный (natsionalny) - national
+- персональный (personalny) - personal
+- официальный (ofitsialny) - official
